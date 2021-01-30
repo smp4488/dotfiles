@@ -42,5 +42,14 @@ source /usr/share/bash-complete-alias/complete_alias
 complete -F _complete_alias dotfiles
 ```
 
+## Requirements
+
+nvim
+```
+vim plugged https://github.com/junegunn/vim-plug
+python3
+node https://github.com/nvm-sh/nvm
+```
+
 ### Resources
 [How to manage your dotfiles with git](https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b)
