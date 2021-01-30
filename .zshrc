@@ -68,7 +68,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node npm extract)
+plugins=(git node npm extract )
 
 
 # User configuration
@@ -107,4 +107,9 @@ source $ZSH/oh-my-zsh.sh
 #powerline
 powerline-daemon -q
 . /usr/share/powerline/bindings/zsh/powerline.zsh
-alias dotfiles='/usr/bin/git --git-dir=/home/smplman/.dotfiles/ --work-tree=/home/smplman'
+
+#dotfiles
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+#compdef dotfiles='git'
+compdef _precommand dotfiles
+unsetopt complete_aliases
